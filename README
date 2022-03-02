@@ -1,0 +1,4 @@
+Aby skompilować wszystkie pliki proszę użyć skryptu ./compile.sh
+Po kompilacji plik binarny server otworzy i uruchomi serwer
+Plik binarny client otwiera okno klienta które zaczyna się od logowania
+

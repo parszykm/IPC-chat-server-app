@@ -1,0 +1,3 @@
+group1:anna:adam:maria
+group2:mariusz:anna:mikolaj
+group3:anna:adrian:ela:lukasz

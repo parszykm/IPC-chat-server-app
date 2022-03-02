@@ -1,0 +1,18 @@
+Opis działania
+Serwer na podstawie plików passwords.txt i groups.txt tworzy tablice struktur - użytkowników i grup.
+Struktura user zawiera informacje : klucz uzytkownika, nazwa uzytkownika, haslo, informacja czy jest zalogowany{0,1}, id kolejki komunikatów.
+Strukura group zawiera informacje: nazwa grupy, lista członków
+
+Serwer posiada dwie kolejki komunikatów. Każdy użytkownik posiada jedną, swoją kolejkę. Generalny schemat działanie aplikacji polega na wysyłaniu przez klienta komunikatu o danym typie  do serwera. Serwer analizuje przysłany komunikat i odpowiada na żądanie klienta w zależnośći od typu komunikatu.
+Serwer został podzielony na dwie części. Piewsza jest procesem macierzystym i odpowiada on części logowania. Klient aby się zalogować musi wpisac login i hasło. Następnie proces klienta wysyła komunikat do pierwszej części serwera a ta jeżeli hasło się zgadza odsyła mu klucz do kolejki komunikatów klienta. Wtedy klient uzyskuję dostęp do swojej kolejki.
+Druga kolejka komunikatów odbiera komunikaty od zalogowanych już klientów. Typy komunikatów to:
+1,2 -odbieranie wiadomości do pojedynczych osób
+3 - potwierdzenia zalogowania się
+4 - wypisanie listy użytkownikow
+5 - komunikat o wylogowaniu się użytkownika
+6 - wypisanie listy grup
+7 - wypisanie listy członków podanej grupy
+8 - dołączenie do podanej grupy
+9 - wyjście z podanej grupy
+10,11 - wysyłanie wiadomości do grupy
+
